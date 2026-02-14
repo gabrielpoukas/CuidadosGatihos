@@ -126,13 +126,44 @@
   @media(max-width: 900px) {
   
     .sidebar {
-      position: relative;
-      width: 100%;
-      height: auto;
+      position: fixed;
+      width: 240px;
+      height: 100%;
+      left: -240px;
+      transition: left 0.3s ease;
+      z-index: 1000;
     }
-  
+
+    .sidebar.open {
+      left: 0;
+    }
+
     .main-content {
       margin-left: 0;
+      padding: 20px;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .menu-toggle {
+      display: block;
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .menu-toggle:focus {
+      outline: none;
     }
   }
-  
+
+  .menu-toggle {
+    display: none;
+  }
