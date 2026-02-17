@@ -1,130 +1,151 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PetCare | Painel de Cuidados</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetCare SaaS | Gabriel Cardoso</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-<div class="layout">
+    <div class="animated-bg"></div>
 
-  <aside class="sidebar">
-    <h2>🐾 PetCare</h2>
-    <nav>
-      <a href="#dashboard" class="nav-link active">Dashboard</a>
-      <a href="#medicamentos" class="nav-link">Medicamentos</a>
-      <a href="#alimentacao" class="nav-link">Alimentação</a>
-      <a href="#rotina" class="nav-link">Rotina</a>
-    </nav>
-  </aside>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <h1>Cuidados</h1>
+                <p>Monitoramento Domiciliar</p>
+            </div>
 
-  <main class="main-content">
+            <button id="theme-switcher" class="theme-toggle">
+              <i class="fas fa-moon"></i> <span>Modo Noite</span>
+          </button>
 
-    <header class="header">
-      <h1>Painel de Cuidados</h1>
-      <span id="dataAtual"></span>
-    </header>
+            <div class="status-overview">
+                <div class="stat-pill">3 Pets Ativos</div>
+                <div class="stat-pill">Rotina Diária</div>
+            </div>
 
-    <section id="dashboard" class="section">
-      <h2>Visão Geral</h2>
-      <div class="grid-3">
-        <div class="card">
-          <h3>Bruce</h3>
-          <p>Medicamentos controlados diariamente.</p>
-        </div>
-        <div class="card">
-          <h3>Ravena</h3>
-          <p>Sem medicamentos, alimentação específica.</p>
-        </div>
-        <div class="card">
-          <h3>Salem</h3>
-          <p>Medicamento diário às 9h.</p>
-        </div>
-      </div>
-    </section>
+            
+        </header>
 
-    <section id="medicamentos" class="section">
-      <h2>Medicamentos</h2>
+        <main>
+            <section class="pet-card" id="bruce">
+                <div class="pet-info">
+                    <span class="status-tag online">Medicamentos</span>
+                    <h2>Bruce</h2>
+                </div>
+                <div class="task-grid">
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">
+                            <strong>10:00 - Domperidona</strong>
+                            <small>Via oral</small>
+                        </div>
+                    </label>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">
+                            <strong>21:00 - Prednisolona</strong>
+                            <small>5mg (Meio comprimido)</small>
+                        </div>
+                    </label>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">
+                            <strong>22:00 - Domperidona</strong>
+                            <small>Administração conjunta</small>
+                        </div>
+                    </label>
 
-      <div class="grid-2">
+                    <label class="task-item">
+                      <input type="checkbox">
+                      <span class="checkmark"></span>
+                      <div class="task-desc">
+                          <strong>17:00 Laxante (um dia sim outro não)</strong>
+                          <small>Administração via Oral</small>
+                      </div>
+                  </label>
+                </div>
+            </section>
 
-        <div class="card">
-          <h3>🐱 Bruce</h3>
-          <ul>
-            <li>Domperidona — 10h e 22h</li>
-            <li>Prednisolona — 21h (1/2 comprimido)</li>
-          </ul>
-        </div>
+            <section class="pet-card" id="ravena">
+                <div class="pet-info">
+                    <span class="status-tag alert">Toda Terça-feira</span>
+                    <h2>Ravena</h2>
+                </div>
+                <div class="task-grid">
+                    <label class="task-item special">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">
+                            <strong>Bombinha para Asma</strong>
+                            <small>Uso obrigatório semanal</small>
+                        </div>
+                    </label>
+                </div>
+            </section>
 
-        <div class="card">
-          <h3>🐱 Salem</h3>
-          <ul>
-            <li>Taffic — 9h (pode atrasar um pouco)</li>
-          </ul>
-        </div>
+            <section class="pet-card" id="salem">
+                <div class="pet-info">
+                    <span class="status-tag">Medicamento Único</span>
+                    <h2>Salem</h2>
+                </div>
+                <div class="task-grid">
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">
+                            <strong>09:00 - 09:30 - Taffic</strong>
+                            <small>Remédio matinal</small>
+                        </div>
+                    </label>
+                </div>
+            </section>
 
-      </div>
-    </section>
+            <section class="service-card">
+                <div class="service-header">
+                    <i class="fas fa-utensils"></i>
+                    <h2>Higiene & Alimentação</h2>
+                </div>
+                <div class="task-grid">
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc"><strong>Manhã:</strong> Sachê Friskies + Ração</div>
+                    </label>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc"><strong>Noite:</strong> Sachê Friskies + Ração</div>
+                    </label>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">Trocar Água (Pelo menos 1x no Dia)</div>
+                    </label>
+                    <label class="task-item">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <div class="task-desc">Limpar Caixas de Areia</div>
+                    </label>
+                </div>
+            </section>
+        </main>
 
-    <section id="alimentacao" class="section">
-      <h2>Alimentação & Peculiaridades</h2>
+        <footer>
+            <p>Desenvolvido com foco em alta performance por</p>
+            <a href="https://www.linkedin.com/in/gabriel-alexandre-marques-cardoso-0041101ab/" target="_blank">
+                Gabriel Cardoso
+            </a>
+        </footer>
+    </div>
 
-      <div class="grid-3">
-
-        <div class="card">
-          <h3>🐱 Bruce</h3>
-          <p>Ração normal.</p>
-        </div>
-
-        <div class="card">
-          <h3>🐱 Ravena</h3>
-          <p>Somente sachê da Friskies.</p>
-        </div>
-
-        <div class="card">
-          <h3>🐱 Salem</h3>
-          <p>Sachê GranPlus Gourmet.</p>
-        </div>
-
-      </div>
-
-      <div class="card destaque">
-        <h3>Informações Gerais</h3>
-        <ul>
-          <li>Sachês ficam na geladeira ou armário próximo à máquina.</li>
-          <li>Colocar ração às 10h e às 22h.</li>
-        </ul>
-      </div>
-
-    </section>
-
-    <section id="rotina" class="section">
-      <h2>Rotina Geral</h2>
-
-      <div class="card">
-        <ul>
-          <li>Limpar caixas de areia pela manhã.</li>
-          <li>Limpar caixas de areia à noite.</li>
-          <li>Verificar alimentação.</li>
-        </ul>
-      </div>
-
-      <div class="alert">
-        Qualquer dúvida pode entrar em contato comigo a qualquer hora.
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>Desenvolvido por <a href="https://www.linkedin.com/in/gabriel-alexandre-marques-cardoso-0041101ab/" target="_blank">Gabriel Cardoso</a></p>
-      
-    </footer>
-
-  </main>
-
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
