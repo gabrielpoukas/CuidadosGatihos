@@ -15,21 +15,37 @@
 
     <div class="container">
         <header>
-            <div class="brand">
-                <h1>Cuidados</h1>
-                <p>Monitoramento Domiciliar</p>
+            <div class="header-main">
+                <div class="brand">
+                    <h1>Cuidados</h1>
+                    <p>Monitoramento Domiciliar</p>
+                </div>
+                <button id="theme-switcher" class="theme-toggle">
+                    <i class="fas fa-moon"></i> <span>Modo Noite</span>
+                </button>
             </div>
-
-            <button id="theme-switcher" class="theme-toggle">
-              <i class="fas fa-moon"></i> <span>Modo Noite</span>
-          </button>
-
-            <div class="status-overview">
-                <div class="stat-pill">3 Pets Ativos</div>
-                <div class="stat-pill">Rotina Diária</div>
+        
+            <div class="header-status">
+                <div class="status-overview">
+                    <div class="stat-pill"><i class="fas fa-paw"></i> 3 Pets Ativos</div>
+                    <div class="stat-pill"><i class="fas fa-calendar-alt"></i> Rotina Diária</div>
+                </div>
+                
+                <div class="pet-summary-row">
+                    <div class="pet-thumb" id="thumb-bruce">
+                        <img src="./img/bruce.jpg" alt="Bruce">
+                        <div class="done-check"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="pet-thumb" id="thumb-ravena">
+                        <img src="./img/ravena.jpg" alt="Ravena">
+                        <div class="done-check"><i class="fas fa-check"></i></div>
+                    </div>
+                    <div class="pet-thumb" id="thumb-salem">
+                        <img src="./img/salem.jpg" alt="Salem">
+                        <div class="done-check"><i class="fas fa-check"></i></div>
+                    </div>
+                </div>
             </div>
-
-            
         </header>
 
         <main>

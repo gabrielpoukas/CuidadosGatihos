@@ -110,3 +110,30 @@ function updateToggleIcon(theme) {
         text.innerText = 'Modo Noite';
     }
 }
+
+function updatePetStatus() {
+    const pets = ['bruce', 'ravena', 'salem'];
+
+    pets.forEach(petId => {
+        const section = document.querySelector(`section#${petId}`);
+        if (!section) return;
+
+        const checkboxes = section.querySelectorAll('input[type="checkbox"]');
+        const allDone = Array.from(checkboxes).every(cb => cb.checked);
+        
+        const thumb = document.getElementById(`thumb-${petId}`);
+        if (allDone && checkboxes.length > 0) {
+            thumb.classList.add('completed');
+        } else {
+            thumb.classList.remove('completed');
+        }
+    });
+}
+
+document.addEventListener('change', (e) => {
+    if (e.target.type === 'checkbox') {
+        updatePetStatus();
+    }
+});
+
+updatePetStatus();
